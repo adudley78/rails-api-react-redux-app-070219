@@ -78,11 +78,23 @@ class Navbar extends Component {
                 
                 <Menu.Item
                     name='submit'
+                    href='/submit'
                     active={activeItem === 'submit'}
                     onClick={this.handleItemClick}
                 >
                     submit
                 </Menu.Item>
+                
+                <Menu.Menu position='right'>
+                    <Menu.Item
+                        name='login'
+                        href='#'
+                        active={activeItem === 'login'}
+                        onClick={this.handleItemClick}
+                    >
+                        login
+                    </Menu.Item>
+                </Menu.Menu>
 
             </Menu>
         )

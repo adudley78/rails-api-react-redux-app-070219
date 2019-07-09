@@ -19,10 +19,13 @@ export class ArticleInput extends Component {
                 <form>
                     <label>title</label>
                     <input type="text" />
+                    <br />
                     <label>url</label>
                     <input type="text" />
+                    <br />
                     <label>text</label>
                     <input type="text" />
+                    <br />
                 </form>
             </div>
         )
