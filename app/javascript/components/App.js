@@ -1,6 +1,8 @@
 import React from "react"
 // import PropTypes from "prop-types"
 
+import ArticlesContainer from '../containers/ArticlesContainer';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { Provider } from 'react-redux';
@@ -17,6 +19,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => ("Home!")} />
+            <Route exact path="/submit" component={ArticlesContainer} />
             <Route path="/hello" render={() => <HelloWorld greeting="Friend"/>} />
           </Switch>
         </BrowserRouter>
