@@ -14,6 +14,7 @@ class Navbar extends Component {
 
                 <Menu.Item
                     name='welcome'
+                    href='/welcome'
                     active={activeItem === 'welcome'}
                     onClick={this.handleItemClick}
                 >
@@ -36,13 +37,13 @@ class Navbar extends Component {
                     threads
                 </Menu.Item>
 
-                <Menu.Item
+                {/* <Menu.Item
                     name='past'
                     active={activeItem === 'past'}
                     onClick={this.handleItemClick}
                 >
                     past
-                </Menu.Item>
+                </Menu.Item> */}
                 
                 <Menu.Item
                     name='comments'
@@ -52,7 +53,7 @@ class Navbar extends Component {
                     comments
                 </Menu.Item>
                 
-                <Menu.Item
+                {/* <Menu.Item
                     name='ask'
                     active={activeItem === 'ask'}
                     onClick={this.handleItemClick}
@@ -66,7 +67,7 @@ class Navbar extends Component {
                     onClick={this.handleItemClick}
                 >
                     show
-                </Menu.Item>
+                </Menu.Item> */}
 
                 <Menu.Item
                     name='club'
