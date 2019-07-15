@@ -1,17 +1,17 @@
 import React from "react"
 // import PropTypes from "prop-types"
 
-import Navbar from '../Navbar'
-import Welcome from '../pages/Welcome'
-import ArticlesContainer from '../containers/ArticlesContainer';
+import Navbar from './Navbar'
+import Welcome from './pages/Welcome'
+import ArticlesContainer from './containers/ArticlesContainer';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { Provider } from 'react-redux';
 
-import HelloWorld from './HelloWorld'
+import HelloWorld from './components/HelloWorld'
 
-import configureStore from '../configureStore'
+import configureStore from './configureStore'
 const store = configureStore();
 
 class App extends React.Component {
