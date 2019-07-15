@@ -1,38 +1,26 @@
-import cuid from 'cuid';
-export const cuidFn = cuid;
+// responsible for each article(and contains the button and ID to delete)
+import React, { Component } from 'react';
+import CommentsContainer from '../../containers/CommentsContainer'
 
-export default function manageArticles(state = {
-    articles: [],
-    comments: [],
-}, action) {
-    switch (action.type) {
+class Article extends Component {
 
-        case 'ADD_ARTICLE':
+    handleOnClick() {
+        this.props.deleteArticle(this.props.article.id);
+    }
 
-            const article = { text: action.text, id: cuidFn() };
-            return {
-                ...state,
-                articles: [...state.articles, article]
-            }
+    render() {
+        const { article } = this.props;
 
-        case 'DELETE_ARTICLE':
-            const articles = state.articles.filter(article => article.id !== action.id);
-            return { ...state, articles }
-
-        case 'ADD_COMMENT':
-
-            const comment = { text: action.comment.text, articleId: action.comment.articleId, id: cuidFn() };
-            return {
-                ...state,
-                comments: [...state.comments, comment]
-            }
-
-        case 'DELETE_COMMENT':
-            const comments = state.comments.filter(comment => comment.id !== action.id);
-            return { ...state, comments }
-
-        default:
-            return state;
-
+        return (
+            <div>
+                <li>
+                    {article.text}
+                    <button onClick={() => this.handleOnClick()}> X </button>
+                    <CommentsContainer article={article} />
+                </li>
+            </div>
+        );
     }
 };
+
+export default Restaurant;

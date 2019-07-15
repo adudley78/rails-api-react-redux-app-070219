@@ -1,15 +1,28 @@
+// connect to Redux and pass the appropriate props down to its children
 import React, { Component } from 'react';
-import ArticleInput from '../components/articles/ArticleInput';
-import { connect } from 'react-redux';
+import ArticleInput from '../components/articles/ArticleInput'
+import Articles from '../components/articles/Articles'
+import { connect } from 'react-redux'
 
-export class ArticlesContainer extends Component {
+class ArticlesContainer extends Component {
     render() {
         return (
             <div>
-                <ArticleInput />
+                <ArticleInput addArticle={this.props.addArticle} />
+                <Articles
+                    articles={this.props.articles}
+                    deleteArticle={this.props.deleteArticle}
+                />
             </div>
-        )
+        );
     }
 }
 
-export default ArticlesContainer
+const mapStateToProps = state => ({ articles: state.articles })
+
+const mapDispatchToProps = dispatch => ({
+    addArticle: text => dispatch({ type: 'ADD_ARTICLE', text }),
+    deleteArticle: id => dispatch({ type: 'DELETE_ARTICLE', id })
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArticlesContainer)
