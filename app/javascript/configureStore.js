@@ -8,10 +8,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {
     articles: [
-        {
-            name: "test",
-            guid: "123"
-        }
+        // {
+        //     name: "test",
+        //     guid: "123"
+        // }
     ]
 };
 

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import ArticleInput from '../components/articles/ArticleInput'
 import Articles from '../components/articles/Articles'
+import Articles from '../actions/ArticleActions'
 import { connect } from 'react-redux'
 
 class ArticlesContainer extends Component {

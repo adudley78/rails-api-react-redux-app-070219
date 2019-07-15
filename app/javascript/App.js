@@ -9,8 +9,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { Provider } from 'react-redux';
 
-import HelloWorld from './components/HelloWorld'
-
 import configureStore from './configureStore'
 const store = configureStore();
 
@@ -24,7 +22,6 @@ class App extends React.Component {
             <Route exact path="/" render={() => ("Home!")} />
             <Route exact path="/welcome" component={Welcome} />
             <Route exact path="/submit" component={ArticlesContainer} />
-            <Route path="/hello" render={() => <HelloWorld greeting="Friend"/>} />
           </Switch>
         </BrowserRouter>
       </Provider>
