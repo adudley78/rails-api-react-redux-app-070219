@@ -18,7 +18,7 @@ class Articles extends Component {
         return (
             <ul>
                 Articles
-        {articleList}
+                {articleList}
             </ul>
         );
     }

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   namespace :v1, defaults: { format: 'json' } do
-    get 'things', to: 'things#index'
+    get 'articles', to: 'articles#index'
   end
 
 end
